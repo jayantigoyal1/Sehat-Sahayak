@@ -86,17 +86,22 @@ body {
 .container {
     /* border: 1px solid black; */
     padding: 20px;
+    max-width: 1200px; /* Added max-width for better control */
+    margin: 0 auto;     /* Center the container */
 }
 
 h1 {
     margin: auto;
     /* border: 1px solid black; */
     color: #007bff;
+    text-align: center; /* Added text-align */
 }
 
 h2 {
     margin: auto;
     color: #6c757d;
+    text-align: center; /* Added text-align */
+    margin-bottom: 20px; /* Added margin */
 }
 
 /* main content */
@@ -124,28 +129,42 @@ h2 {
 .appointment-content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Added for responsiveness */
+    gap: 20px; /* Added gap for spacing */
 }
-.appointment-left, .appointment-right, .appoinappointment-corner {
-    padding: 30px;
+
+.appointment-left, .appointment-right, .time-picker {
+    padding: 20px; /* Standardized padding */
     box-sizing: border-box;
+    border: 1px solid #ddd; /* Added a light border */
+    border-radius: 5px;
+    background: #fdfdfd;
 }
+
 .appointment-left{
-    width: 300px;
+    /* Use flex-basis for better control than width */
+    flex-basis: 300px; 
+    flex-grow: 0;
+    flex-shrink: 0; /* Don't shrink */
     border-right: 1px solid grey;
-    height: 400px;
+    height: fit-content; /* Make height fit content */
 }
+
 .appointment-right {
-    border-right: 1px solid red;
-    width:1%;
-    height: 400px;
-    padding: 30px;
+    /* This is column 2 (Dates) */
+    flex-basis: 400px; /* Set a base width */
+    flex-grow: 1;      /* Allow it to grow */
+    /* REMOVED: border-right: 1px solid red; */
+    /* REMOVED: width: 1%; */
+    height: fit-content; /* Make height fit content */
 }
-.appointment-corner{
-    width: 10%;
-}
+
+/* REMOVED: .appointment-corner rule */
+
 
 .appointment-left h3 {
     margin-bottom: 20px;
+    margin-top: 0; /* Removed default margin */
 }
 
 .appointment-left ul {
@@ -157,16 +176,14 @@ h2 {
     margin-bottom: 10px;
 }
 
-.appointment-right {
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-}
-
 .date-picker, .time-picker {
     margin-bottom: 20px;
 }
 
+.date-picker h3, .time-picker h3 {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
 .date-picker h4, .time-picker h4 {
     margin-bottom: 10px;
 }
@@ -174,39 +191,40 @@ h2 {
 .dates {
     display: flex;
     flex-wrap: wrap;
+    gap: 10px; /* Use gap instead of margins */
 }
 
 .dates div {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-right: 10px;
-    margin-bottom: 10px;
     cursor: pointer;
     text-align: center;
-    width: calc(33.3333% - 10px);
+    /* Use flex-basis for a flexible grid */
+    flex-basis: calc(33.333% - 10px); 
 }
 
 .time-picker {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-
-}
-
-.time-picker h4 {
-    flex-basis: 100%;
+    /* This is column 3 (Times) */
+    flex-basis: 300px; /* Set a base width */
+    flex-grow: 1;      /* Allow it to grow */
+    display: flex;     /* Keep this */
+    flex-direction: column; /* Keep this */
 }
 
 .time-slots {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    /* REMOVED: width: 45%; (This was the other broken part) */
+    width: 100%; /* Make it fill its parent, the time-picker */
 }
 
 .time-slots ul {
     list-style: none;
     padding: 0;
+    display: flex; /* Added flex for better rows */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Add gap */
 }
 
 .time-slots .morning, .time-slots .afternoon {
@@ -221,13 +239,25 @@ h2 {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 0; /* Handled by gap */
     cursor: pointer;
     text-align: center;
+    flex-grow: 1; /* Allow items to grow */
+    flex-basis: 80px; /* Give them a minimum size */
 }
 
 .time-slots ul li:hover, .dates div:hover {
     background-color: #007bff;
     color: white;
     border-color: #007bff;
+}
+
+/* Simple responsive media query */
+@media (max-width: 900px) {
+    .appointment-content {
+        flex-direction: column;
+    }
+    .appointment-left, .appointment-right, .time-picker {
+        flex-basis: 100%; /* Stack them on top of each other */
+    }
 }

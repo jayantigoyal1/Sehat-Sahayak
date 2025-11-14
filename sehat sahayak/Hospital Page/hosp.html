@@ -3,97 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
     <link rel="stylesheet" href="hospstyle.css">
-    <title>Hospitals</title>
+    
+    <title>Hospitals - Sehat Sahayak</title>
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <ul>
-            <li class="logo-container">
-                <img src="Logo.jpg" alt="logo">
-            </li>
-            <ul class="nav-links">
-                <li><a href="../Home_Page/home.html">Home</a></li>
-                <li><a href="https://ai-detection-1.onrender.com/">AI Detection</a></li>
-                <li><a href="https://sripriyaagarwal16-helathcare-assistant-geminiappqachat-hbrmls.streamlit.app/">Chat Bot</a></li>
-                <li><a href="../Doctor Page/doctor.html">Dr. Consultation</a></li>
-                <li><a href="../fitness/fit.html">Fitness Model</a></li>
-                <li><a href="../Hospital Page/hosp.html">Hospital</a></li>
-
-            </ul>
-            <div class="icon-container">
-                <a href="../profile page/profile.html"><i id="icon1" class="fa-solid fa-user"></i></a>
-                <a href="#menu"><i id="icon2" class="fa-solid fa-bars"></i></a>
-            </div>
+        <div class="logo-container">
+            <img src="logo.jpg" alt="logo" onerror="this.src='https://placehold.co/150x50/007bff/white?text=Sehat+Sahayak&font=lucida'; this.onerror=null;">
+        </div>
+        
+        <ul class="nav-links" id="nav-links-menu">
+            <li><a href="../Home_Page/home.html">Home</a></li>
+            <li><a href="https://ai-detection-1.onrender.com/" target="_blank">AI Detection</a></li>
+            <li><a href="https://sripriyaagarwal16-helathcare-assistant-geminiappqachat-hbrmls.streamlit.app/" target="_blank">Chat Bot</a></li>
+            <li><a href="../Doctor Page/doctor.html">Dr. Consultation</a></li>
+            <li><a href="../fitness/fit.html">Fitness Model</a></li>
+            <li><a href="#hospitals" class="active">Hospital</a></li>
         </ul>
+        
+        <div class="icon-container">
+            <a href="../profile page/profile.html" class="icon-btn" aria-label="Profile"><i id="icon1" class="fa-solid fa-user"></i></a>
+            
+            <a href="javascript:void(0);" class="icon-btn" id="menu-toggle" aria-label="Menu"><i id="icon2" class="fa-solid fa-bars"></i></a>
+        </div>
     </nav>
     
-    <div class="nav-right">
-        <input type="text" placeholder="Search the location..." class="search-bar">
-        <button class="search-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="24" height="24">
-                <path d="M11 2a9 9 0 016.36 15.36l4.7 4.7a1 1 0 01-1.42 1.42l-4.7-4.7A9 9 0 1111 2zm0 2a7 7 0 100 14 7 7 0 000-14z" fill="currentColor"/>
-            </svg>
-        </button>
-    </div>
-    <div class="Topic">
-        <h2>Explore <span class="highlight">THE</span> Hospitals</h2>
-    </div>
+    <!-- Hero Section with Search -->
+    <section class="hero-section">
+        <div class="Topic">
+            <h2>Explore <span class="highlight">THE</span> Hospitals</h2>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Search by location, hospital name..." class="search-bar">
+            <button class="search-button" aria-label="Search">
+                <i class="fa-solid fa-search"></i>
+            </button>
+        </div>
+    </section>
     
-   
-    
-    <div class="container">
-        <div class="slides">
-            <div class="items" style="background-image: url('https://img.freepik.com/premium-photo/modern-hospital-building-with-glass-exteriors-medical-facilities-generative-ai_288945-1510.jpg');">
-                
-                <div class="content">
-                    <div class="name">Hospital</div>
-                    <div class="des">Bla bla</div>
-                    <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b">View Maps</a>
+    <!-- Slider -->
+    <section id="hospitals">
+        <div class="container">
+            <div class="slides">
+                <!-- Using your original image filenames -->
+                <div class="items" style="background-image: url('https://img.freepik.com/premium-photo/modern-hospital-building-with-glass-exteriors-medical-facilities-generative-ai_288945-1510.jpg');">
+                    <div class="content">
+                        <div class="name">General Hospital</div>
+                        <div class="des">Explore top-rated hospitals and facilities near you.</div>
+                        <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b" target="_blank">View Maps</a>
+                    </div>
+                </div>
+                <div class="items" style="background-image: url('hospital 1.png');" onerror="this.style.backgroundImage='url(https://content3.jdmagicbox.com/comp/delhi/x9/011pxx11.xx11.130826134713.r6x9/catalogue/avantika-hospital-indirapuram-ghaziabad-hospitals-4mpddi1t80.jpg)'">
+                    <div class="content">
+                        <div class="name">Avantika Hospital</div>
+                        <div class="des">High-quality care in Indirapuram, Ghaziabad.</div>
+                        <a href="https://www.google.com/maps/d/viewer?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.65433421613766%2C77.37611388795226&z=14" class="b" target="_blank">View Maps</a>
+                    </div>
+                </div>
+                <div class="items" style="background-image: url('https://images1-fabric.practo.com/shanti-gopal-hospital-ghaziabad-1468229957-57836945e8bbd.jpg');">
+                    <div class="content">
+                        <div class="name">Shaanti Gopal Hospital</div>
+                        <div class="des">Comprehensive medical services for your family.</div>
+                        <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b" target="_blank">View Maps</a>
+                    </div>
+                </div>
+                <div class="items" style="background-image: url('Hospital 3.png');" onerror="this.style.backgroundImage='url(https://lyfhospital.com/wp-content/uploads/2022/04/SUN_4718.jpg)'">
+                    <div class="content">
+                        <div class="name">Lyf Hospital</div>
+                        <div class="des">State-of-the-art facilities and expert doctors.</div>
+                        <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b" target="_blank">View Maps</a>
+                    </div>
+                </div>
+                <div class="items" style="background-image: url('Hospital  2.png');" onerror="this.style.backgroundImage='url(https://i.pinimg.com/originals/ae/ff/83/aeff833c82221f006d33a4d547c6a7ca.jpg)'">
+                    <div class="content">
+                        <div class="name">Hospital 2</div>
+                        <div class="des">Dedicated to community health and wellness.</div>
+                        <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b" target="_blank">View Maps</a>
+                    </div>
+                </div>
+                <div class="items" style="background-image: url('https://doctorlistingingestionpr.blob.core.windows.net/doctorprofilepic/1670847903991_HospitalProfileImage_d60063aa-88ee-4848-b5e8-eb1cea76d763.png');">
+                    <div class="content">
+                        <div class="name">Shree Narayana Hospital</div>
+                        <div class="des">Compassionate care, advanced technology.</div>
+                        <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b" target="_blank">View Maps</a>
+                    </div>
+                </div>
+           </div>
+           
+           <div class="buttons">
+                <button class="prev" aria-label="Previous Slide"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="next" aria-label="Next Slide"><i class="fa-solid fa-arrow-right"></i></button>
+           </div>
+        </div>
+    </section>
+
+    <!-- Our Services Section (New) -->
+    <section id="services">
+        <div class="Topic">
+            <h2>Our <span class="highlight">Services</span></h2>
+        </div>
+        <div class="services-container">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3>Cardiology</h3>
+                <p>Expert heart care from leading cardiologists.</p>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>General Checkup</h3>
+                <p>Comprehensive health checkups for all ages.</p>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-ambulance"></i>
+                </div>
+                <h3>Emergency Care</h3>
+                <p>24/7 emergency services for urgent needs.</p>
+            </div>
+            
+            <!-- Service Card 4 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                <h3>Orthopedics</h3>
+                <p>Advanced care for bones, joints, and spine.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (New) -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <!-- UPDATED: Using sehat sahayak.png -->
+                <img src="logo.jpg" alt="Sehat Sahayak Logo" class="logo-img" onerror="this.src='https://placehold.co/150x50/ffffff/000000?text=Sehat+Sahayak&font=lucida'; this.onerror=null;">
+                <p>Your trusted partner in health. Find doctors, hospitals, and services all in one place.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="../Home_Page/home.html">Home</a></li>
+                    <li><a href="#hospitals">Hospitals</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="../Doctor Page/doctor.html">Dr. Consultation</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li style="display: flex; align-items: start;">
+                        <i class="fas fa-map-marker-alt" style="margin-right: 10px; margin-top: 5px; color: #007bff;"></i>
+                        <span>123 Health St, Medical City, India</span>
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                        <i class="fas fa-phone-alt" style="margin-right: 10px; color: #007bff;"></i>
+                        <span>+91 123 456 7890</span>
+                    </li>
+                    <li style="display: flex; align-items: center;">
+                        <i class="fas fa-envelope" style="margin-right: 10px; color: #007bff;"></i>
+                        <span>support@sehatsahayak.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <div class="items" style="background-image: url('https://content3.jdmagicbox.com/comp/delhi/x9/011pxx11.xx11.130826134713.r6x9/catalogue/avantika-hospital-indirapuram-ghaziabad-hospitals-4mpddi1t80.jpg');">
-                <div class="content">
-                    <div class="name">Avantika Hospital</div>
-                    <div class="des">Bla bla</div>
-                    <a href="https://www.google.com/maps/d/viewer?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.65433421613766%2C77.37611388795226&z=14" class="b">View Maps</a>
-                </div>
-            </div>
-            <div class="items" style="background-image: url('https://images1-fabric.practo.com/shanti-gopal-hospital-ghaziabad-1468229957-57836945e8bbd.jpg');">
-                <div class="content">
-                    <div class="name">Shaanti Gopal Hospital</div>
-                    <div class="des">Bla bla</div>
-                    <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b">View Maps</a>
-                </div>
-            </div>
-            <div class="items" style="background-image: url('https://lyfhospital.com/wp-content/uploads/2022/04/SUN_4718.jpg');">
-                <div class="content">
-                    <div class="name">Lyf Hospital</div>
-                    <div class="des">Bla bla</div>
-                    <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b">View Maps</a>
-                </div>
-            </div>
-            <div class="items" style="background-image: url('https://i.pinimg.com/originals/ae/ff/83/aeff833c82221f006d33a4d547c6a7ca.jpg');">
-                <div class="content">
-                    <div class="name">Hospital 2</div>
-                    <div class="des">Bla bla</div>
-                    <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b">View Maps</a>
-                </div>
-            </div>
-            <div class="items" style="background-image: url('https://doctorlistingingestionpr.blob.core.windows.net/doctorprofilepic/1670847903991_HospitalProfileImage_d60063aa-88ee-4848-b5e8-eb1cea76d763.png');">
-                <div class="content">
-                    <div class="name">Shree Narayana Hospital</div>
-                    <div class="des">Bla bla</div>
-                    <a href="https://www.google.com/maps/d/u/0/edit?hl=en&mid=1nz5q6FOW5Lci-7UKnoDItsd1EWVRkjQ&ll=28.693157098267942%2C77.38939148887319&z=12" class="b">View Maps</a>
-                </div>
-            </div>
-       </div>
-    </div>
-   <div class="buttons">
-    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-   </div>
-    <script src="https://kit.fontawesome.com/ddc4f27e89.js" crossorigin="anonymous"></script>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Sehat Sahayak. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Link to your JS file -->
     <script src="hosp.js"></script>
 </body>
 </html>
